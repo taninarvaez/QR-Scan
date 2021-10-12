@@ -1,14 +1,6 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      QR Scan
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true">
-<ion-button (click)="qrScan()" expand="block" fill="clear" shape="round">
-  Scanear Codigo
+<ion-content [fullscreen]="true" class="background">
+<ion-button class="buttonStyle" (click)="qrScan()"  shape="round">
+  Scanear Codigo 
 </ion-button>
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <!-- <app-explore-container name="Tab 1 page"></app-explore-container> -->
 </ion-content>

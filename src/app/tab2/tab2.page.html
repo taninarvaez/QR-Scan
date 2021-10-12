@@ -1,17 +1,15 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 2
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+<ion-content [fullscreen]="true" class="background">
+  <ion-list>
+    <ion-item *ngFor="let r of datalocal.registros" (click)="ejecutarRegistro(registro)" detail>
+      <ion-icon slot="start" [name]="r.icon"></ion-icon>
+      <ion-label>
+        <h2>
+          {{r.texto}}
+        </h2>
+        <p>
+          {{r.create | date: 'medium'}}
+        </p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
 </ion-content>
